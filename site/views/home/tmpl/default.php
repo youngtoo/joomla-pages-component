@@ -10,8 +10,14 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 ?>
-<section title="" class="p-2 m-1">
-    <h1><?php echo $this->msg; ?></h1>
-    <p>Welcome to Creativity, I'm kenyan and I design things!</p>
-    <!-- Wesbite homepage content -->
+
+<section style="min-height:400px;" class="d-flex justify-content-center py-2">
+<div class="row align-items-center">
+
+<div class="col-sm-12 col-md-8 offset-md-4"><h2 class="">It starts with a design.</h2><p class="text-justify">We are a team of designers and developers who craft beautiful brand experiences fit for a digital world.</p><p> <a href="products#home-what-we-can-do">Learn More</a></p></div>
+</div>
 </section>
+
+
+
+

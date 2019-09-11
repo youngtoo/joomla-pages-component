@@ -12,25 +12,44 @@ defined('_JEXEC') or die('Restricted access');
 ?>
 <section title="" class="p-2 m-1 text-center">
     <h1><?php echo $this->msg; ?></h1>
-    <p class="py-1">Welcome to Creativity, I'm kenyan and I design things!</p>
+    <p class="py-1">We are Kenyan! We design things!</p>
     <!-- Wesbite homepage content -->
 </section>
 
-<section title="" class="p-2 m-1">
-    <!-- Product -->
-    <div class="card mb-3" style="max-width: 540px;">
-    <div class="row no-gutters">
-        <div class="col-md-4">
-        <img src="https://placeimg.com/640/480/any" class="card-img" alt="...">
-        </div>
-        <div class="col-md-8">
-        <div class="card-body">
-            <h5 class="card-title">Web Design</h5>
-            <p class="card-text">Get a professional website.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
-        </div>
-    </div>
-    </div>
-    <!-- ./ products-->
+
+<section style="min-height:300px;" id="home-what-we-can-do">
+
+<div class="p-2 m-2 d-flex justify-content-around d-flex align-items-stretch flex-wrap">
+
+<div class="card m-2" style="width: 18rem;">
+  <img src="" style="background-color:rgb(77, 5, 232); color:#fff; object-fit:cover; height:175px;" class="card-img-top text-center" alt="Graphics Design">
+  <div class="card-body">
+    <h5 class="card-title">Logo Design</h5>
+    <p class="card-text">Print, Social Media, Logo Design</p>
+    <a href="#" class="btn btn-primary stretched-link">Get a Design</a>
+  </div>
+</div>
+
+
+<div class="card m-2" style="width: 18rem;">
+  <img src="" style="background-color:rgb(77, 5, 232); color:#fff; object-fit:cover; height:175px;" class="card-img-top text-center" alt="Web Design and Development">
+  <div class="card-body">
+    <h5 class="card-title">Web Design &amp; Development </h5>
+    <p class="card-text">Joomla, Worpress, Laravel</p>
+    <a href="#" class="btn btn-primary stretched-link">Get a Website</a>
+  </div>
+</div>
+
+
+<div class="card m-2" style="width: 18rem;">
+  <img src="" style="background-color:rgb(77, 5, 232); color:#fff; object-fit:cover; height:175px;" class="card-img-top text-center" alt="Photography and Art">
+  <div class="card-body">
+    <h5 class="card-title">Photography &amp; Art </h5>
+    <p class="card-text">Portraits, Photographs &amp; Drawings </p>
+    <a href="#" class="btn btn-primary stretched-link">Book Now</a>
+  </div>
+</div>
+
+
+</div>
 </section>

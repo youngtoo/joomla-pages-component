@@ -10,43 +10,80 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 ?>
-<section>
-    <div class="d-flex flex-wrap .justify-content-sm-center justify-content-md-start align-items-center">
-        <!-- Blog content -->
-        <div class="card m-2" style="width: 20rem; overflow:hidden;">
-            <img src="https://placeimg.com/640/480/any"  style="object-fit:cover; height:200px;" class="card-img-top" alt="...">
-            <div class="card-body">
-                <a href="#"><p class="card-text">How to Start a blog in 2019</p></a>
-            </div>
-        </div>
-        <!-- Blog content -->
+<section class="m-1">
 
-        <!-- Blog content -->
-        <div class="card m-2" style="width: 20rem; overflow:hidden;">
-            <img src="https://placeimg.com/640/480/any" style="object-fit:cover; height:200px;" class="card-img-top" alt="...">
-            <div class="card-body">
-                <a href="#"><p class="card-text">How to Start a blog in 2019</p></a>
-            </div>
-        </div>
-        <!-- Blog content -->
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Web Design</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Design</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Photography</a>
+  </li>
+</ul>
 
-        <!-- Blog content -->
-        <div class="card m-2" style="width: 20rem; overflow:hidden;">
-            <img src="https://placeimg.com/640/480/any" style="object-fit:cover; height:200px;" class="card-img-top" alt="...">
-            <div class="card-body">
-                <a href="#"><p class="card-text">How to Start a blog in 2019</p></a>
-            </div>
-        </div>
-        <!-- Blog content -->
+</section>
 
-        <!-- Blog content -->
-        <div class="card m-2" style="width: 20rem; overflow:hidden;">
-            <img src="https://placeimg.com/640/480/any" style="object-fit:cover; height:200px;" class="card-img-top" alt="...">
-            <div class="card-body">
-                <a href="#"><p class="card-text">How to Start a blog in 2019</p></a> 
-            </div>
-        </div>
-        <!-- Blog content -->
-        
-    </div>
+
+
+<section style="min-height:300px;" id="home-what-we-can-do">
+
+<div class="p-2 m-2 d-flex justify-content-around d-flex align-items-stretch flex-wrap">
+
+<div class="card m-2" style="width: 18rem;">
+  <img src="" style="background-color:rgb(77, 5, 232); color:#fff; object-fit:cover; height:100px;" class="card-img-top text-center" alt="Graphics Design">
+  <div class="card-body">
+    <a href="#" class="stretched-link"><h5 class="card-title">An Introduciton to Logo Design</h5></a>
+    <p class="card-text">Print, Social Media, Logo Design</p>
+  </div>
+</div>
+
+
+<div class="card m-2" style="width: 18rem;">
+  <img src="" style="background-color:rgb(77, 5, 232); color:#fff; object-fit:cover; height:100px;" class="card-img-top text-center" alt="Web Design and Development">
+  <div class="card-body">
+    <a href="#" class="stretched-link"><h5 class="card-title">Learn Web Design &amp; Development </h5></a>
+    <p class="card-text">Joomla, Worpress, Laravel</p>
+  </div>
+</div>
+
+
+<div class="card m-2" style="width: 18rem;">
+  <img src="" style="background-color:rgb(77, 5, 232); color:#fff; object-fit:cover; height:100px;" class="card-img-top text-center" alt="Photography and Art">
+  <div class="card-body">
+    <a href="#" class="stretched-link"><h5 class="card-title">What makes good Photography &amp; Art? </h5></a>
+    <p class="card-text">Portraits, Photographs &amp; Drawings </p>
+  </div>
+</div>
+
+<div class="card m-2" style="width: 18rem;">
+  <img src="" style="background-color:rgb(77, 5, 232); color:#fff; object-fit:cover; height:100px;" class="card-img-top text-center" alt="Graphics Design">
+  <div class="card-body">
+    <a href="#" class="stretched-link"><h5 class="card-title">An Introduciton to Logo Design</h5></a>
+    <p class="card-text">Print, Social Media, Logo Design</p>
+  </div>
+</div>
+
+
+<div class="card m-2" style="width: 18rem;">
+  <img src="" style="background-color:rgb(77, 5, 232); color:#fff; object-fit:cover; height:100px;" class="card-img-top text-center" alt="Web Design and Development">
+  <div class="card-body">
+    <a href="#" class="stretched-link"><h5 class="card-title">Learn Web Design &amp; Development </h5></a>
+    <p class="card-text">Joomla, Worpress, Laravel</p>
+  </div>
+</div>
+
+
+<div class="card m-2" style="width: 18rem;">
+  <img src="" style="background-color:rgb(77, 5, 232); color:#fff; object-fit:cover; height:175px;" class="card-img-top text-center" alt="Photography and Art">
+  <div class="card-body">
+    <a href="#" class="stretched-link"> <h5 class="card-title">What makes good Photography &amp; Art? </h5></a>
+    <p class="card-text">Portraits, Photographs &amp; Drawings </p>
+  </div>
+</div>
+
+
+</div>
 </section>
