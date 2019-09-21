@@ -15,7 +15,7 @@ defined('_JEXEC') or die('Restricted access');
  *
  * @since  0.0.1
  */
-class PageViewDashboard extends JViewLegacy
+class PageViewPosts extends JViewLegacy
 {
 	/**
 	 * Display the Hello World view

@@ -1,3 +1,5 @@
+
+
 <?php
 /**
  * @package     Joomla.Administrator
@@ -11,19 +13,4 @@
 defined('_JEXEC') or die('Restricted Access');
 ?>
 
-<div class="container-fluid">
-  <div class="row">
-  <div class="col-md-4">
-      Posts:
-      32
-  </div>
-  <div class="col-md-4">
-      Media:
-      63
-  </div>
-  <div class="col-md-4">
-      Home:
-      78
-  </div>
-  </div>
-</div>
+<h1>Posts</h1>
