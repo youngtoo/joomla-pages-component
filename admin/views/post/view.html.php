@@ -15,7 +15,7 @@ defined('_JEXEC') or die('Restricted access');
  *
  * @since  0.0.1
  */
-class PageViewDashboard extends JViewLegacy
+class PageViewPost extends JViewLegacy
 {
 	/**
 	 * Display the Hello World view
@@ -30,6 +30,10 @@ class PageViewDashboard extends JViewLegacy
 		//$this->items		= $this->get('Items');
 		//$this->pagination	= $this->get('Pagination');
 
+		// Get the Data
+		$this->form = $this->get('Form');
+		$this->item = $this->get('Item');
+
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
 		{
@@ -37,7 +41,6 @@ class PageViewDashboard extends JViewLegacy
 
 			return false;
 		}
-
 		// Set the toolbar
 		$this->addToolBar();
 
@@ -54,6 +57,27 @@ class PageViewDashboard extends JViewLegacy
 	 */
 	protected function addToolBar()
 	{
-		JToolbarHelper::title(JText::_('Dashboard'));
+		$input = JFactory::getApplication()->input;
+
+		// Hide Joomla Administrator Main menu
+		$input->set('hidemainmenu', true);
+
+		$isNew = ($this->item->id == 0);
+
+		if ($isNew)
+		{
+			$title = JText::_('New Post');
+		}
+		else
+		{
+			$title = JText::_('Edit Post');
+		}
+
+		JToolbarHelper::title($title, 'post');
+		JToolbarHelper::save('post.save');
+		JToolbarHelper::cancel(
+			'post.cancel',
+			$isNew ? 'JTOOLBAR_CANCEL' : 'JTOOLBAR_CLOSE'
+		);
 	}
 }

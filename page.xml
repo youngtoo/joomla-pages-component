@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="3.0" method="upgrade">
 
-	<name>Page</name>
+	<name>com_page</name>
 	<!-- The following elements are optional and free of formatting constraints -->
 	<creationDate>06 Sept 2019</creationDate>
 	<author>Ian Too</author>
 	<authorEmail>ask@itoo.co.ke</authorEmail>
 	<authorUrl>http://www.itoo.co.ke</authorUrl>
-	<copyright>Copyright Info</copyright>
+	<copyright>(C) 2019 Ian Too | Creative Developer. All rights reserved.</copyright>
 	<license>License Info</license>
 	<!--  The version string is recorded in the components table -->
 	<version>0.0.1</version>
 	<!-- The description is optional and defaults to the name -->
-	<description>Manage Website Pages</description>
+	<description>
+		Pages component manages multiple pages on a joomla Website.
+
+	</description>
+
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
 
 	<update> <!-- Runs on update; New since J2.5 -->
 		<schemas>
@@ -44,7 +58,7 @@
 		<menu link='index.php?option=com_page'>Pages Manager</menu>
 		<submenu>
 			<menu view="dashboard">Dashboard</menu>
-			<menu view="blog">Blog</menu>
+			<menu view="posts">Posts</menu>
 		</submenu>
 		<!-- Administration Main File Copy Section -->
 		<!-- Note the folder attribute: This attribute describes the folder
@@ -60,6 +74,10 @@
 			<folder>views</folder>
 			<!-- models files section -->
 			<folder>models</folder>
+			<!-- tables files section -->
+			<folder>tables</folder>
+			<!-- controllers files section -->
+			<folder>controllers</folder>
 		</files>
 	</administration>
 

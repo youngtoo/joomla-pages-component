@@ -37,8 +37,25 @@ class PageViewPosts extends JViewLegacy
 
 			return false;
 		}
+		// Set the toolbar
+		$this->addToolBar();
 
 		// Display the template
 		parent::display($tpl);
+	}
+
+	/**
+	 * Add the page title and toolbar.
+	 *
+	 * @return  void
+	 *
+	 * @since   1.6
+	 */
+	protected function addToolBar()
+	{
+		JToolbarHelper::title(JText::_('Manage Blog Posts'));
+		JToolbarHelper::addNew('post.add');
+		JToolbarHelper::editList('post.edit');
+		JToolbarHelper::deleteList('', 'posts.delete');
 	}
 }

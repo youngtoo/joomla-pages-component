@@ -4,6 +4,7 @@ CREATE TABLE `__posts` (
 	`id`       INT(11)     NOT NULL AUTO_INCREMENT,
 	`title` VARCHAR(25) NOT NULL,
     `content` TEXT,
+	`featured` TEXT,
 	`published` tinyint(4) NOT NULL DEFAULT '1',
 	PRIMARY KEY (`id`)
 )

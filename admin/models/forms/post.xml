@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+				name="id"
+				type="hidden"
+				/>
+		<field
+				name="title"
+				type="text"
+				label="Post Title"
+				description="Provide a post title. Will be displayed at the front-end"
+				size="40"
+                placeholder="Post Title"
+				class="inputbox"
+				default=""
+				/>
+        <field name="content" type="editor" label="Test Field" description="" width="" filter="safehtml" />
+        <field name="featured" type="media" directory="featured" preview="true" />
+	</fieldset>
+</form>

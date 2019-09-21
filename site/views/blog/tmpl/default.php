@@ -30,7 +30,7 @@ defined('_JEXEC') or die('Restricted access');
 
 <section style="min-height:300px;" id="home-what-we-can-do">
 
-<div class="p-2 m-2 d-flex justify-content-around d-flex align-items-stretch flex-wrap">
+<div class="p-2 m-2 d-flex justify-content-between d-flex align-items-stretch flex-wrap">
 
 <?php
 for ($i=0; $i < 5; $i++) 
