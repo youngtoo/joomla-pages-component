@@ -14,7 +14,7 @@ defined('_JEXEC') or die('Restricted access');
  *
  * @since  0.0.1
  */
-class PagesTablePosts extends JTable
+class PageTablePost extends JTable
 {
 	/**
 	 * Constructor

@@ -27,8 +27,8 @@ class PageViewPosts extends JViewLegacy
 	function display($tpl = null)
 	{
 		// Get data from the model
-		//$this->items		= $this->get('Items');
-		//$this->pagination	= $this->get('Pagination');
+		$this->items		= $this->get('Items');
+		$this->pagination	= $this->get('Pagination');
 
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))

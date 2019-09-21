@@ -27,7 +27,7 @@ class PageViewBlog extends JViewLegacy
 	function display($tpl = null)
 	{
 		// Assign data to the view
-		$this->msg = 'Our Blog!';
+		$this->posts = $this->get('Msg');
 		
 		$app    = JFactory::getApplication();
 		$pathway = $app->getPathway();

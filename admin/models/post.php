@@ -28,7 +28,7 @@ class PageModelPost extends JModelAdmin
 	 *
 	 * @since   1.6
 	 */
-	public function getTable($type = 'Posts', $prefix = 'PageTable', $config = array())
+	public function getTable($type = 'Post', $prefix = 'PageTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}

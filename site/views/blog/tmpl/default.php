@@ -33,18 +33,20 @@ defined('_JEXEC') or die('Restricted access');
 <div class="p-2 m-2 d-flex justify-content-between d-flex align-items-stretch flex-wrap">
 
 <?php
-for ($i=0; $i < 5; $i++) 
+if(isset($this->posts)){
+foreach($this->posts as $i => $post) 
 {
 
 ?>
 <div class="card m-2" style="width: 18rem;">
-  <img src="" style="background-color:#f5f5f5; color:#fff; object-fit:cover; height:150px;" class="card-img-top text-center" alt="Graphics Design">
+  <img src="<?php echo $post->featured;?>" style="background-color:#f5f5f5; color:#fff; object-fit:cover; height:150px;" class="card-img-top text-center" alt="Graphics Design">
   <div class="card-body">
-    <a href="#" class="stretched-link"><h5 class="card-title text-dark" >An Introduciton to Logo Design</h5></a>
+    <a href="#" class="stretched-link"><h5 class="card-title text-dark" ><?php echo $post->title;?></h5></a>
     <p class="card-text">Print, Social Media, Logo Design</p>
   </div>
 </div>
 <?php
+}
 }
 ?>
 
