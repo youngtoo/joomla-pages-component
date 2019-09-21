@@ -20,6 +20,14 @@
 		</schemas>
 	</update>
 
+
+	<media destination="com_page" folder="media">
+		<filename>index.html</filename>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>css</folder>
+	</media>
+
 	<!-- Site Main File Copy Section -->
 	<!-- Note the folder attribute: This attribute describes the folder
 		to copy FROM in the package to install therefore files copied
