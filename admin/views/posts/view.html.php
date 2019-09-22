@@ -37,6 +37,15 @@ class PageViewPosts extends JViewLegacy
 
 			return false;
 		}
+
+		// Options button.
+		if (JFactory::getUser()->authorise('core.admin', 'com_page')) 
+		{
+		JToolBarHelper::preferences('com_page');
+		}
+
+		// Set the submenu
+		PageHelper::addSubmenu('posts');
 		// Set the toolbar
 		$this->addToolBar();
 

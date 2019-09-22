@@ -10,7 +10,11 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted Access');
 ?>
-
+<div id="j-sidebar-container" class="span2">
+		<?php echo JHtmlSidebar::render(); ?>
+	</div>
+	<div id="j-main-container" class="span10">
+	<table class="table table-striped table-hover">
 <div class="container-fluid">
   <div class="row">
   <div class="col-md-4">
@@ -26,4 +30,5 @@ defined('_JEXEC') or die('Restricted Access');
       78
   </div>
   </div>
+</div>
 </div>

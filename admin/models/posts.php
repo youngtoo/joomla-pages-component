@@ -28,9 +28,15 @@ class PageModelPosts extends JModelList
 		$query = $db->getQuery(true);
 
 		// Create the base select statement.
-		$query->select('*')
-                ->from($db->quoteName('__posts'));
+		//$query->select('*')
+		//		->from($db->quoteName('__posts'));
+		
+		$query->select('a.id as id, a.title as title, a.content as content , a.featured as featured , a.published as published , a.alias as alias')
+			  ->from($db->quoteName('__posts', 'a'));
 
+		// Join over the categories.
+		$query->select($db->quoteName('c.title', 'category_title'))
+			->join('LEFT', $db->quoteName('#__categories', 'c') . ' ON c.id = a.catid');
 		return $query;
 	}
 }

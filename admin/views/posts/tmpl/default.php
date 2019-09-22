@@ -14,6 +14,10 @@ defined('_JEXEC') or die('Restricted Access');
 ?>
 
 <form action="index.php?option=com_page&view=posts" method="post" id="adminForm" name="adminForm">
+<div id="j-sidebar-container" class="span2">
+		<?php echo JHtmlSidebar::render(); ?>
+	</div>
+	<div id="j-main-container" class="span10">
 	<table class="table table-striped table-hover">
 		<thead>
 		<tr>
@@ -53,6 +57,13 @@ defined('_JEXEC') or die('Restricted Access');
 							<a href="<?php echo $link; ?>" title="<?php echo JText::_('Edit Post'); ?>">
 								<?php echo $row->title; ?>
 							</a>
+							<span class="small break-word">
+                                	<?php echo JText::sprintf('JGLOBAL_LIST_ALIAS', $this->escape($row->alias)); ?>
+                                </span>
+							<div class="small">
+									<?php echo JText::_('JCATEGORY') . ': ' . $this->escape($row->category_title); ?>
+							</div>
+
 						</td>
 						<td align="center">
 							<?php echo JHtml::_('jgrid.published', $row->published, $i, 'pages.', true, 'cb'); ?>
@@ -68,4 +79,5 @@ defined('_JEXEC') or die('Restricted Access');
 	<input type="hidden" name="task" value=""/>
 	<input type="hidden" name="boxchecked" value="0"/>
 	<?php echo JHtml::_('form.token'); ?>
+	</div>
 </form>

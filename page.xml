@@ -10,12 +10,15 @@
 	<copyright>(C) 2019 Ian Too | Creative Developer. All rights reserved.</copyright>
 	<license>License Info</license>
 	<!--  The version string is recorded in the components table -->
-	<version>0.0.2</version>
+	<version>0.0.5</version>
 	<!-- The description is optional and defaults to the name -->
 	<description>
 		Pages component manages multiple pages on a joomla Website.
 
 	</description>
+
+	<!-- Runs on install/uninstall/update; New in 2.5 -->
+	<scriptfile>script.php</scriptfile>
 
 	<install> <!-- Runs on install -->
 		<sql>
@@ -52,6 +55,7 @@
 		<filename>controller.php</filename>
 		<folder>views</folder>
 		<folder>models</folder>
+		<filename>router.php</filename>
 	</files>
 
 	<administration>
@@ -79,6 +83,11 @@
 			<folder>tables</folder>
 			<!-- controllers files section -->
 			<folder>controllers</folder>
+			<filename>access.xml</filename>
+
+			<filename>config.xml</filename>
+			<!-- helpers files section -->
+			<folder>helpers</folder>
 		</files>
 	</administration>
 

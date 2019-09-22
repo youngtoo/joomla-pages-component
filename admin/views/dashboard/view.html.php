@@ -37,6 +37,8 @@ class PageViewDashboard extends JViewLegacy
 
 			return false;
 		}
+		// Set the submenu
+		PageHelper::addSubmenu('dashboard');
 
 		// Set the toolbar
 		$this->addToolBar();

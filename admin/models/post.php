@@ -85,4 +85,50 @@ class PageModelPost extends JModelAdmin
 
 		return $data;
 	}
+
+	/**
+	 * Method to override the JModelAdmin save() function to handle Save as Copy correctly
+	 *
+	 * @param   The helloworld record data submitted from the form.
+	 *
+	 * @return  parent::save() return value
+	 */
+	public function save($data)
+	{
+		$input = JFactory::getApplication()->input;
+
+		JLoader::register('CategoriesHelper', JPATH_ADMINISTRATOR . '/components/com_categories/helpers/categories.php');
+
+		// Validate the category id
+		// validateCategoryId() returns 0 if the catid can't be found
+		if ((int) $data['catid'] > 0)
+		{
+			$data['catid'] = CategoriesHelper::validateCategoryId($data['catid'], 'com_page');
+		}
+
+		// Alter the greeting and alias for save as copy
+		if ($input->get('task') == 'save2copy')
+		{
+			$origTable = clone $this->getTable();
+			$origTable->load($input->getInt('id'));
+
+			if ($data['title'] == $origTable->title)
+			{
+				list($title, $alias) = $this->generateNewTitle($data['catid'], $data['alias'], $data['title']);
+				$data['title'] = $title;
+				$data['alias'] = $alias;
+			}
+			else
+			{
+				if ($data['alias'] == $origTable->alias)
+				{
+					$data['alias'] = '';
+				}
+			}
+			// standard Joomla practice is to set the new record as unpublished
+			$data['published'] = 0;
+		}
+
+		return parent::save($data);
+	}
 }

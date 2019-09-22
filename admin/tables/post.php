@@ -25,4 +25,15 @@ class PageTablePost extends JTable
 	{
 		parent::__construct('__posts', 'id', $db);
 	}
+
+	public function check()
+	{
+		$this->alias = trim($this->alias);
+		if (empty($this->alias))
+		{
+			$this->alias = $this->title;
+		}
+		$this->alias = JFilterOutput::stringURLSafe($this->alias);
+		return true;
+	}
 }

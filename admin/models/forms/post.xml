@@ -14,7 +14,31 @@
                 placeholder="Post Title"
 				class="inputbox"
 				default=""
+				required="true"
+				/>		
+		
+		<field 
+				name="alias" 
+				type="text" 
+				label="JFIELD_ALIAS_LABEL"
+				description="JFIELD_ALIAS_DESC"
+				hint="JFIELD_ALIAS_PLACEHOLDER"
+				size="40" 
 				/>
+		
+		<field
+				name="catid"
+				type="category"
+				extension="com_page"
+				class="inputbox"
+				default=""
+				label="Post Category"
+				description="Choose a Category"
+				required="true"
+		>
+			<option value="0">JOPTION_SELECT_CATEGORY</option>
+		</field>
+
         <field name="content" type="editor" label="Test Field" description="" width="" filter="safehtml" />
         <field name="featured" type="media" directory="featured" preview="true" />
 	</fieldset>

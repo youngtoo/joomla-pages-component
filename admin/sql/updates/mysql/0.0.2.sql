@@ -1,8 +1,8 @@
-DROP TABLE IF EXISTS `#__helloworld`;
+DROP TABLE IF EXISTS `__posts`;
 
 CREATE TABLE `__posts` (
 	`id`       INT(11)     NOT NULL AUTO_INCREMENT,
-	`title` VARCHAR(25) NOT NULL,
+	`title` VARCHAR(250) NOT NULL,
     `content` TEXT,
 	`featured` TEXT,
 	`published` tinyint(4) NOT NULL DEFAULT '1',

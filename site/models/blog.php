@@ -27,48 +27,25 @@ class PageModelBlog extends JModelItem
          *
 	 * @return  string  The message to be displayed to the user
 	 */
-	public function getMsg()
+	public function getPosts()
 	{
-		if (!is_array($this->posts))
-		{
-			$this->posts = array();
-		}
+    $db = JFactory::getDbo();
 
-		if (!isset($this->posts[$id]))
-		{
-			
-            $db = JFactory::getDbo();
-
-            // Create a new query object.
-            $query = $db->getQuery(true);
-            
-            // Select all records from the user profile table where key begins with "custom.".
-            // Order it by the ordering field.
-            $query->select($db->quoteName(array('title', 'content', 'featured')));
-            $query->from($db->quoteName('__posts'));
-            
-            // Reset the query using our newly populated query object.
-            $db->setQuery($query);
-            
-            // Load the results as a list of stdClass objects (see later for more options on retrieving data).
-            $results = $db->loadObjectList();	}
-
-		return $this->results;
-    }
+    // Create a new query object.
+    $query = $db->getQuery(true);
     
-    /**
-	 * Method to get a table object, load it if necessary.
-	 *
-	 * @param   string  $type    The table name. Optional.
-	 * @param   string  $prefix  The class prefix. Optional.
-	 * @param   array   $config  Configuration array for model. Optional.
-	 *
-	 * @return  JTable  A JTable object
-	 *
-	 * @since   1.6
-	 */
-	public function getTable($type = 'post', $prefix = 'PageTable', $config = array())
-	{
-		return JTable::getInstance($type, $prefix, $config);
-	}
+    // Select all records from the user profile table where key begins with "custom.".
+    // Order it by the ordering field.
+    $query->select('*');
+    $query->from('__posts');
+    
+    // Reset the query using our newly populated query object.
+    $db->setQuery($query);
+    
+    // Load the results as a list of stdClass objects (see later for more options on retrieving data).
+    $this->posts = $db->loadObjectList();
+
+		return $this->posts;
+  }
+    
 }

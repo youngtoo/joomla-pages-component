@@ -10,30 +10,14 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 ?>
-<section class="m-1">
-
-<ul class="nav justify-content-center">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Web Design</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Design</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Photography</a>
-  </li>
-</ul>
-
-</section>
-
 
 
 <section style="min-height:300px;" id="home-what-we-can-do">
 
-<div class="p-2 m-2 d-flex justify-content-between d-flex align-items-stretch flex-wrap">
+<div class="p-2 m-2 d-flex justify-content-start d-flex align-items-center flex-wrap">
 
 <?php
-if(isset($this->posts)){
+if(!empty($this->posts)){
 foreach($this->posts as $i => $post) 
 {
 
@@ -47,6 +31,14 @@ foreach($this->posts as $i => $post)
 </div>
 <?php
 }
+}
+else{
+  ?>
+  <div class="p-2">
+    <p class="text-center">We'll keep you updated. Nothing here for now.</p>
+  </div>
+
+  <?php
 }
 ?>
 

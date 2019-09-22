@@ -15,7 +15,7 @@ defined('_JEXEC') or die('Restricted access');
  *
  * @since  0.0.1
  */
-class PageViewBlog extends JViewLegacy
+class PageViewPost extends JViewLegacy
 {
 	/**
 	 * Display the Page view
@@ -27,20 +27,12 @@ class PageViewBlog extends JViewLegacy
 	function display($tpl = null)
 	{
 		// Assign data to the view
+		$this->msg = 'Products';
 
-		$this->posts = $this->get('Posts');
-
-		// Check for errors.
-		if (count($errors = $this->get('Errors')))
-		{
-			JLog::add(implode('<br />', $errors), JLog::WARNING, 'jerror');
-
-			return false;
-		}
 		
 		$app    = JFactory::getApplication();
 		$pathway = $app->getPathway();
-		$pathway->addItem('Blog', '/blog');
+		$pathway->addItem('Products', '/products');
 
 		// Display the view
 		parent::display($tpl);
