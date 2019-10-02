@@ -25,7 +25,7 @@ foreach($this->posts as $i => $post)
 <div class="card m-2" style="width: 18rem;">
   <img src="<?php echo $post->featured;?>" style="background-color:#f5f5f5; color:#fff; object-fit:cover; height:150px;" class="card-img-top text-center" alt="Graphics Design">
   <div class="card-body">
-    <a href="#" class="stretched-link"><h5 class="card-title text-dark" ><?php echo $post->title;?></h5></a>
+    <a href="<?php echo JRoute::_('index.php?option=com_page&view=post&id='.$post->id);?>" class="stretched-link"><h5 class="card-title text-dark" ><?php echo $post->title;?></h5></a>
     <p class="card-text">Print, Social Media, Logo Design</p>
   </div>
 </div>

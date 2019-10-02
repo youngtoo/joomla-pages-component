@@ -19,19 +19,3 @@ defined('_JEXEC') or die('Restricted access');
 </section>
 
 
-<section style="min-height:300px;" class="d-flex justify-content-center align-items-center py-2">
-
-
-<?php
-    for ($i=0; $i < 10; $i++) { 
-    ?>
-    <!-- Item -->
-        <div style="overflow:hidden; height:200px; width:200px;" class="m-2">
-            <img src=".."  alt="..." style="object-fit:cover; background-color:#444;">
-        </div>
-    <!-- Item -->
-
-    <?php
-    }
-?>
-</section>
